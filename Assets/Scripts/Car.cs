@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    public Rigidbody rigidbody;
+    public Transform cenOfMass;
 
     [Header("Car Specs")]
     public float wheelRadius;
 
-    private void Start()
+    private void Update()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rigidbody.centerOfMass = cenOfMass.localPosition;
     }
 }

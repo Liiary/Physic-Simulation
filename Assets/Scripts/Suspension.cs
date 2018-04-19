@@ -5,7 +5,7 @@ using UnityEngine;
 public class Suspension : MonoBehaviour
 {
     public Rigidbody rigidbody;
-    private Car carScript;
+    public Car carScript;
 
     [Header("Suspension")]
     public float springForce;
@@ -17,11 +17,6 @@ public class Suspension : MonoBehaviour
     private float previousLenght;
     private float currentLenght;
     private float springVelocitiy;
-
-    private void Start()
-    {
-        carScript = transform.parent.GetComponent<Car>();
-    }
 
     private void FixedUpdate()
     {
