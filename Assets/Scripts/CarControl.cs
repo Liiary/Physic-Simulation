@@ -42,7 +42,7 @@ public class CarControl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            //break;
+            Brake();
             return;
         }
 
@@ -64,8 +64,53 @@ public class CarControl : MonoBehaviour
                 axleInfo.rightWheel.brakeTorque = 0;
             }
 
-            //applylocalpositiontovisuals()
+            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
+            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
         }
+    }
+
+    private void Start()
+    {
+        //visualWheelOffset = axleInfos[0].leftWheel.transform.GetChild(0).eulerAngles;
+    }
+
+    private void Brake()
+    {
+        for (int i = 0; i < axleInfos.Length; i++)
+        {
+            AxleInfo axleInfo = axleInfos[i];
+
+            if (axleInfo.Motor)
+            {
+                axleInfo.leftWheel.motorTorque = 0;
+                axleInfo.rightWheel.motorTorque = 0;
+
+                axleInfo.leftWheel.brakeTorque = brakeSpeed;
+                axleInfo.rightWheel.brakeTorque = brakeSpeed;
+            }
+
+            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
+            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
+        }
+    }
+
+    private void ApplyLocalPositionToVisuals(WheelCollider wheelCollider)
+    {
+        if (wheelCollider.transform.childCount == 0)
+        {
+            return;
+        }
+
+        Transform visualWheel = wheelCollider.transform.GetChild(0);
+        Vector3 position;
+        Quaternion rotation;
+
+        wheelCollider.GetWorldPose(out position, out rotation);
+
+        rotation.eulerAngles += visualWheelOffset;
+
+        visualWheel.position = position;
+        visualWheel.rotation = rotation;
     }
 }
 
