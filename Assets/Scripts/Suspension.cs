@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Suspension : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+    public Rigidbody rBody;
     public Car carScript;
 
     [Header("Suspension")]
@@ -29,7 +29,7 @@ public class Suspension : MonoBehaviour
             springForce = springConstant * currentLenght;
             damperForce = damperConstant * springVelocitiy;
 
-            rigidbody.AddForceAtPosition(transform.up * (springForce + damperForce), transform.position);
+            rBody.AddForceAtPosition(transform.up * (springForce + damperForce), transform.position);
         }
     }
 }
