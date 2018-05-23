@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarControll1 : MonoBehaviour
+public class CarController : MonoBehaviour
 {
+    [System.Serializable]
+    public struct AxleInfo
+    {
+        public WheelCollider leftWheel;
+        public WheelCollider rightWheel;
+        public bool Motor;
+        public bool Steering;
+    }
+
     public List<AxleInfo> AxleInfos;
     public float MotorTorque;
     public float SteeringAngle;
