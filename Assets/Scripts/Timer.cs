@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -32,11 +33,11 @@ public class Timer : MonoBehaviour
         {
             Time.timeScale = 0;
             Car.GetComponent<CarController>().enabled = false;
-            FinishText.text = "FINISH!\n" + TimeText.text + "\nPress Enter to move on";
+            FinishText.text = "FINISH!\n" + TimeText.text + "\nPress P to move on";
 
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.P))
             {
-                //SwitchScene
+                SceneManager.LoadScene(0);
             }
         }
     }

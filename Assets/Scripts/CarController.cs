@@ -18,6 +18,7 @@ public class CarController : MonoBehaviour
     public float SteeringAngle;
     public float BrakeForce; 
     public Transform CenterOfMass;
+    public Transform SpawnPoint;
 
     private void Update()
     {
@@ -67,6 +68,11 @@ public class CarController : MonoBehaviour
 
             ApplyPositionToVisuals(axleInfo.leftWheel);
             ApplyPositionToVisuals(axleInfo.rightWheel);
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                this.transform.position = SpawnPoint.position;
+            }
         }
     }
 
