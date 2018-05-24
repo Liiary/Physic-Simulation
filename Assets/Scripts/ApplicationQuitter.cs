@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ApplicationQuitter : MonoBehaviour
 {
     public void OnPointerClick(PointerEventData eventData)
     {
