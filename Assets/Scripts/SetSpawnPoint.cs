@@ -6,6 +6,8 @@ public class SetSpawnPoint : MonoBehaviour
 {
     public Transform SpawnPoint;
     public Transform NewSpawnPoint;
+    public GameObject BlueLight;
+    public GameObject RedLight;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +15,9 @@ public class SetSpawnPoint : MonoBehaviour
         {
             SpawnPoint.position = NewSpawnPoint.position;
             SpawnPoint.rotation = NewSpawnPoint.rotation;
+
+            BlueLight.SetActive(true);
+            RedLight.SetActive(false);
         }
     }
 }

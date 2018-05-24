@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23265563561233146}
   - component: {fileID: 114994355869128806}
   m_Layer: 0
-  m_Name: CheckPoint
+  m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,3 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 0}
   NewSpawnPoint: {fileID: 4459621431387692}
+  BlueLight: {fileID: 0}
+  RedLight: {fileID: 0}
