@@ -69,9 +69,10 @@ public class CarController : MonoBehaviour
             ApplyPositionToVisuals(axleInfo.leftWheel);
             ApplyPositionToVisuals(axleInfo.rightWheel);
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 this.transform.position = SpawnPoint.position;
+                this.transform.rotation = SpawnPoint.rotation;
             }
         }
     }

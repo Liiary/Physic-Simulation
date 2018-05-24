@@ -33,10 +33,19 @@ public class Timer : MonoBehaviour
         {
             Time.timeScale = 0;
             Car.GetComponent<CarController>().enabled = false;
-            FinishText.text = "FINISH!\n" + TimeText.text + "\nPress P to move on";
+            FinishText.text = "FINISH!\n" + TimeText.text + "\nPress Q to go to the Main Menu\n Press R to restart";
 
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.R))
             {
+                Time.timeScale = 1;
+                Car.GetComponent<CarController>().enabled = true;
+                SceneManager.LoadScene(1);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Time.timeScale = 1;
+                Car.GetComponent<CarController>().enabled = true;
                 SceneManager.LoadScene(0);
             }
         }
