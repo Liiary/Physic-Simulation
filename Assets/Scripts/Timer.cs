@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour
+public class Timer : SelectCar
 {
-    public GameObject Car;
     public Text TimeText;
     public Text FinishText;
     public static bool finish;
@@ -32,14 +31,14 @@ public class Timer : MonoBehaviour
         if (finish)
         {
             Time.timeScale = 0;
-            Car.GetComponent<CarController>().enabled = false;
+            Cars[CarNumber].GetComponent<CarController>().enabled = false;
             FinishText.text = "FINISH!\n" + TimeText.text + "\nPress Q to go to the Main Menu\n Press R to restart";
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Time.timeScale = 1;
-                Car.GetComponent<CarController>().enabled = true;
-                Car.GetComponent<AudioSource>().enabled = false;
+                Cars[CarNumber].GetComponent<CarController>().enabled = true;
+                Cars[CarNumber].GetComponent<AudioSource>().enabled = false;
                 finish = false;
                 SceneManager.LoadScene(1);
             }
@@ -47,8 +46,8 @@ public class Timer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Time.timeScale = 1;
-                Car.GetComponent<CarController>().enabled = true;
-                Car.GetComponent<AudioSource>().enabled = false;
+                Cars[CarNumber].GetComponent<CarController>().enabled = true;
+                Cars[CarNumber].GetComponent<AudioSource>().enabled = false;
                 finish = false;
                 SceneManager.LoadScene(0);
             }

@@ -18,6 +18,7 @@ public class SelectCar : MonoBehaviour
         }
 
         Cars[CarNumber].gameObject.SetActive(true);
+        PlayerPrefs.SetInt("CarNumber", CarNumber);
     }
 
     public void SelectingPreviousCar()
@@ -31,5 +32,6 @@ public class SelectCar : MonoBehaviour
         }
 
         Cars[CarNumber].gameObject.SetActive(true);
+        PlayerPrefs.SetInt("CarNumber", CarNumber);
     }
 }
