@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public GameObject Car;
     public Text TimeText;
     public Text FinishText;
-    private bool finish;
+    public static bool finish;
     private float startTime;
 
     private void Start()
@@ -39,6 +39,8 @@ public class Timer : MonoBehaviour
             {
                 Time.timeScale = 1;
                 Car.GetComponent<CarController>().enabled = true;
+                Car.GetComponent<AudioSource>().enabled = false;
+                finish = false;
                 SceneManager.LoadScene(1);
             }
 
@@ -46,6 +48,8 @@ public class Timer : MonoBehaviour
             {
                 Time.timeScale = 1;
                 Car.GetComponent<CarController>().enabled = true;
+                Car.GetComponent<AudioSource>().enabled = false;
+                finish = false;
                 SceneManager.LoadScene(0);
             }
         }
