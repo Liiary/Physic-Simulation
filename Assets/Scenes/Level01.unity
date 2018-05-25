@@ -1764,6 +1764,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114313456958422140, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: Cars.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4193435367560258, guid: 34c693c0843cc70409ca85ae330eb728, type: 2}
       propertyPath: m_LocalPosition.x
       value: 152.5
@@ -1819,6 +1824,26 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114313456958422140, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: Cars.Array.data[0]
+      value: 
+      objectReference: {fileID: 1159372178}
+    - target: {fileID: 114313456958422140, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: Cars.Array.data[1]
+      value: 
+      objectReference: {fileID: 977241471}
+    - target: {fileID: 114313456958422140, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: Cars.Array.data[2]
+      value: 
+      objectReference: {fileID: 1461596683}
+    - target: {fileID: 114313456958422140, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: FinishImage
+      value: 
+      objectReference: {fileID: 1754700657}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c693c0843cc70409ca85ae330eb728, type: 2}
   m_IsPrefabParent: 0
@@ -2548,7 +2573,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.621756, g: 0.7322975, b: 0.9191176, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2727,6 +2752,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 248691489}
+  - {fileID: 1754700656}
   - {fileID: 1359661587}
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -6877,6 +6903,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114727886746348352, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: Cars.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4000016627927122, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 152.5
@@ -6944,6 +6975,26 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114727886746348352, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: Cars.Array.data[0]
+      value: 
+      objectReference: {fileID: 1159372178}
+    - target: {fileID: 114727886746348352, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: Cars.Array.data[1]
+      value: 
+      objectReference: {fileID: 977241471}
+    - target: {fileID: 114727886746348352, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: Cars.Array.data[2]
+      value: 
+      objectReference: {fileID: 1461596683}
+    - target: {fileID: 114727886746348352, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: FinishImage
+      value: 
+      objectReference: {fileID: 1754700657}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c, type: 2}
   m_IsPrefabParent: 0
@@ -12418,7 +12469,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1655054925513848, guid: 27dad89639e9b3045ac2d6de40eb80ff, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27dad89639e9b3045ac2d6de40eb80ff, type: 2}
@@ -13571,7 +13622,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 252846827}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13590,7 +13641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9852941, g: 0.304282, b: 0.304282, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15854,6 +15905,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114881717885445440, guid: bd7746b2f55b4934194612784684f974,
+        type: 2}
+      propertyPath: Cars.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4977121062692102, guid: bd7746b2f55b4934194612784684f974, type: 2}
       propertyPath: m_LocalPosition.x
       value: 152.5
@@ -15905,6 +15961,26 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114881717885445440, guid: bd7746b2f55b4934194612784684f974,
+        type: 2}
+      propertyPath: Cars.Array.data[0]
+      value: 
+      objectReference: {fileID: 1159372178}
+    - target: {fileID: 114881717885445440, guid: bd7746b2f55b4934194612784684f974,
+        type: 2}
+      propertyPath: Cars.Array.data[1]
+      value: 
+      objectReference: {fileID: 977241471}
+    - target: {fileID: 114881717885445440, guid: bd7746b2f55b4934194612784684f974,
+        type: 2}
+      propertyPath: Cars.Array.data[2]
+      value: 
+      objectReference: {fileID: 1461596683}
+    - target: {fileID: 114881717885445440, guid: bd7746b2f55b4934194612784684f974,
+        type: 2}
+      propertyPath: FinishImage
+      value: 
+      objectReference: {fileID: 1754700657}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd7746b2f55b4934194612784684f974, type: 2}
   m_IsPrefabParent: 0
@@ -17610,6 +17686,74 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86f783457a9659e41a99dc3147fefdba, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1754700655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1754700656}
+  - component: {fileID: 1754700658}
+  - component: {fileID: 1754700657}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1754700656
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1754700655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.44, y: 1.9625124, z: 1}
+  m_Children: []
+  m_Father: {fileID: 252846827}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1754700657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1754700655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.34602076, g: 0.34885454, b: 0.36764705, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1754700658
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1754700655}
 --- !u!4 &1755870932 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 914351682f086b145ae6774edb5da09b, type: 2}
@@ -17919,7 +18063,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570

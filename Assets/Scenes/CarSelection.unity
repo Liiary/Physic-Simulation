@@ -321,6 +321,16 @@ Prefab:
       propertyPath: m_TargetDisplay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82198274917079030, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511882316073734, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cc23357cec46dc4bbb6c2e76a9bdf0c, type: 2}
   m_IsPrefabParent: 0
@@ -971,6 +981,16 @@ Prefab:
         type: 2}
       propertyPath: m_TargetDisplay
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82823527428000460, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114998125009650498, guid: 34c693c0843cc70409ca85ae330eb728,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c693c0843cc70409ca85ae330eb728, type: 2}
@@ -1804,7 +1824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fcc388ef30d5442b42e3ac49ef49b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedCar: {fileID: 0}
 --- !u!4 &1562848853 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 68168b1d080f7ff4da5ac899be391c39, type: 2}
@@ -2171,7 +2190,12 @@ Prefab:
     - target: {fileID: 82944089238542344, guid: bd7746b2f55b4934194612784684f974,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114244464190523110, guid: bd7746b2f55b4934194612784684f974,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd7746b2f55b4934194612784684f974, type: 2}
@@ -2231,7 +2255,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570

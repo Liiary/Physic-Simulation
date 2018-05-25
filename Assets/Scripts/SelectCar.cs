@@ -7,6 +7,11 @@ public class SelectCar : MonoBehaviour
     public GameObject[] Cars;
     public int CarNumber;
 
+    public void Start()
+    {
+        CarNumber = 0;
+    }
+
     public void SelectingNextCar()
     {
         Cars[CarNumber].gameObject.SetActive(false);

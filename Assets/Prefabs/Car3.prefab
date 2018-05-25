@@ -833,9 +833,9 @@ MonoBehaviour:
     rightWheel: {fileID: 146463074278161682}
     Motor: 0
     Steering: 0
-  MotorTorque: 1000
-  SteeringAngle: 30
-  BrakeForce: 1000
+  MotorTorque: 1200
+  SteeringAngle: 20
+  BrakeForce: 1200
   CenterOfMass: {fileID: 4579057557384726}
   SpawnPoint: {fileID: 0}
 --- !u!114 &114881717885445440
@@ -849,7 +849,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0741b98513c9247b8574358d84f6c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Car: {fileID: 1707390751287326}
+  Cars:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1707390751287326}
+  CarNumber: 0
+  FinishImage: {fileID: 0}
   TimeText: {fileID: 0}
   FinishText: {fileID: 0}
 --- !u!124 &124099194938012284
@@ -868,7 +873,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 35000
+    spring: 30000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
@@ -897,7 +902,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 35000
+    spring: 30000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
@@ -926,7 +931,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 35000
+    spring: 30000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
@@ -955,7 +960,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 35000
+    spring: 30000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : SelectCar
 {
+    public Image FinishImage;
     public Text TimeText;
     public Text FinishText;
     public static bool finish;
@@ -32,24 +33,37 @@ public class Timer : SelectCar
         {
             Time.timeScale = 0;
             Cars[CarNumber].GetComponent<CarController>().enabled = false;
-            FinishText.text = "FINISH!\n" + TimeText.text + "\nPress Q to go to the Main Menu\n Press R to restart";
+            FinishImage.gameObject.SetActive(true);
+            FinishText.text = "FINISH!\nTime: " + TimeText.text + "\nPress Q to go to the Main Menu\n Press R to restart\nPress C to change your Car";
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Time.timeScale = 1;
                 Cars[CarNumber].GetComponent<CarController>().enabled = true;
-                Cars[CarNumber].GetComponent<AudioSource>().enabled = false;
+                Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
+                FinishImage.gameObject.SetActive(false);
                 finish = false;
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Time.timeScale = 1;
                 Cars[CarNumber].GetComponent<CarController>().enabled = true;
-                Cars[CarNumber].GetComponent<AudioSource>().enabled = false;
+                Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
+                FinishImage.gameObject.SetActive(false);
                 finish = false;
                 SceneManager.LoadScene(0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                Time.timeScale = 1;
+                Cars[CarNumber].GetComponent<CarController>().enabled = true;
+                Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
+                FinishImage.gameObject.SetActive(false);
+                finish = false;
+                SceneManager.LoadScene(1);
             }
         }
     }

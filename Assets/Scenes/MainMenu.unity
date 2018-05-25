@@ -641,7 +641,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -755,7 +755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fcc388ef30d5442b42e3ac49ef49b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedCar: {fileID: 0}
 --- !u!114 &1527343905
 MonoBehaviour:
   m_ObjectHideFlags: 0
