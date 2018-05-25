@@ -10,6 +10,7 @@ public class Timer : SelectCar
     public Text TimeText;
     public Text FinishText;
     public static bool finish;
+
     private float startTime;
 
     private void Start()
@@ -52,6 +53,7 @@ public class Timer : SelectCar
                 Cars[CarNumber].GetComponent<CarController>().enabled = true;
                 Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
                 FinishImage.gameObject.SetActive(false);
+                CarNumber = 0;
                 finish = false;
                 SceneManager.LoadScene(0);
             }
@@ -62,6 +64,7 @@ public class Timer : SelectCar
                 Cars[CarNumber].GetComponent<CarController>().enabled = true;
                 Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
                 FinishImage.gameObject.SetActive(false);
+                CarNumber = 0;
                 finish = false;
                 SceneManager.LoadScene(1);
             }

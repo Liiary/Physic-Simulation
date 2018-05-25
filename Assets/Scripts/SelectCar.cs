@@ -1,16 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectCar : MonoBehaviour
 {
     public GameObject[] Cars;
     public int CarNumber;
-
-    public void Start()
-    {
-        CarNumber = 0;
-    }
 
     public void SelectingNextCar()
     {
@@ -23,7 +19,6 @@ public class SelectCar : MonoBehaviour
         }
 
         Cars[CarNumber].gameObject.SetActive(true);
-        PlayerPrefs.SetInt("CarNumber", CarNumber);
     }
 
     public void SelectingPreviousCar()
@@ -37,6 +32,11 @@ public class SelectCar : MonoBehaviour
         }
 
         Cars[CarNumber].gameObject.SetActive(true);
+    }
+
+    public void StartRace()
+    {
         PlayerPrefs.SetInt("CarNumber", CarNumber);
+        SceneManager.LoadScene(2);
     }
 }
