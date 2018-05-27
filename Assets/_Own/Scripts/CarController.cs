@@ -82,6 +82,7 @@ public class CarController : MonoBehaviour
             {
                 PauseGame = true;
                 PauseMenuCanvas.gameObject.SetActive(true);
+                this.GetComponent<AudioSource>().enabled = false;
                 this.GetComponent<CarController>().enabled = false;
                 Time.timeScale = 0;
             }

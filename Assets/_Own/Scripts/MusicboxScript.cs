@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Musicbox : MonoBehaviour
+public class MusicboxScript : MonoBehaviour
 {
     private void Awake()
     {

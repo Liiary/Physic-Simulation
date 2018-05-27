@@ -17,6 +17,7 @@ public class PauseMenu : SelectCar
         CarController.PauseGame = false;
         PauseMenuCanvas.gameObject.SetActive(false);
         Cars[CarNumber].GetComponent<CarController>().enabled = true;
+        Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
         Time.timeScale = 1;
     }
 
@@ -25,6 +26,7 @@ public class PauseMenu : SelectCar
         CarController.PauseGame = false;
         PauseMenuCanvas.gameObject.SetActive(false);
         Cars[CarNumber].GetComponent<CarController>().enabled = true;
+        Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
         Time.timeScale = 1;
 
         SceneManager.LoadScene(2);
@@ -35,6 +37,7 @@ public class PauseMenu : SelectCar
         CarController.PauseGame = false;
         PauseMenuCanvas.gameObject.SetActive(false);
         Cars[CarNumber].GetComponent<CarController>().enabled = true;
+        Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
         Time.timeScale = 1;
         CarNumber = 0;
         PlayerPrefs.SetInt("CarNumber", CarNumber);
@@ -47,6 +50,7 @@ public class PauseMenu : SelectCar
         CarController.PauseGame = false;
         PauseMenuCanvas.gameObject.SetActive(false);
         Cars[CarNumber].GetComponent<CarController>().enabled = true;
+        Cars[CarNumber].GetComponent<AudioSource>().enabled = true;
         Time.timeScale = 1;
         CarNumber = 0;
         PlayerPrefs.SetInt("CarNumber", CarNumber);

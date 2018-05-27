@@ -20,14 +20,9 @@ public class CarSound : MonoBehaviour
             Car.GetComponent<AudioSource>().pitch = pitch;
         }
 
-        if (Timer.finish || CarController.PauseGame)
+        if (Timer.finish)
         {
             Car.GetComponent<AudioSource>().enabled = false;
-        }
-
-        if (!CarController.PauseGame)
-        {
-            Car.GetComponent<AudioSource>().enabled = true;
         }
     }
 }
