@@ -15,6 +15,7 @@ public class Timer : SelectCar
 
     private void Start()
     {
+        CarNumber = PlayerPrefs.GetInt("CarNumber");
         startTime = Time.time;
     }
 
@@ -22,6 +23,11 @@ public class Timer : SelectCar
     {
         if (!finish)
         {
+            if (CarController.PauseGame)
+            {
+                return;
+            }
+
             float timer = Time.time - startTime;
 
             string seconds = (timer % 60).ToString("f3");
@@ -55,6 +61,7 @@ public class Timer : SelectCar
                 FinishImage.gameObject.SetActive(false);
                 CarNumber = 0;
                 finish = false;
+                PlayerPrefs.SetInt("CarNumber", CarNumber);
                 SceneManager.LoadScene(0);
             }
 
@@ -66,6 +73,7 @@ public class Timer : SelectCar
                 FinishImage.gameObject.SetActive(false);
                 CarNumber = 0;
                 finish = false;
+                PlayerPrefs.SetInt("CarNumber", CarNumber);
                 SceneManager.LoadScene(1);
             }
         }

@@ -19,6 +19,9 @@ public class CarController : MonoBehaviour
     public float BrakeForce; 
     public Transform CenterOfMass;
     public Transform SpawnPoint;
+    public GameObject PauseMenuCanvas;
+
+    public static bool PauseGame;
 
     private void Update()
     {
@@ -73,6 +76,14 @@ public class CarController : MonoBehaviour
             {
                 this.transform.position = SpawnPoint.position;
                 this.transform.rotation = SpawnPoint.rotation;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGame = true;
+                PauseMenuCanvas.gameObject.SetActive(true);
+                this.GetComponent<CarController>().enabled = false;
+                Time.timeScale = 0;
             }
         }
     }
