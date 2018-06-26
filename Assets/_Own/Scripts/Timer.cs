@@ -9,14 +9,18 @@ public class Timer : SelectCar
     public Image FinishImage;
     public Text TimeText;
     public Text FinishText;
+    public Text StartCountDownText;
     public static bool finish;
 
+    private bool countDown;
+    private float startCountDown = 3f;
     private float startTime;
 
     private void Start()
     {
         CarNumber = PlayerPrefs.GetInt("CarNumber");
-        startTime = Time.time;
+        StartCountDownText.text = "3";
+        countDown = true;
     }
 
     private void Update()
@@ -28,12 +32,43 @@ public class Timer : SelectCar
                 return;
             }
 
+            if (countDown)
+            {
+                Cars[CarNumber].GetComponent<CarController>().enabled = false;
+                startCountDown -= Time.deltaTime;
+
+                if (startCountDown <= 2)
+                {
+                    StartCountDownText.text = "2";
+                }
+              
+                if (startCountDown <= 1)
+                {
+                    StartCountDownText.text = "1";
+                }
+
+                if (startCountDown <= 0)
+                {
+                    StartCountDownText.text = "Go";
+                    startTime = Time.time;
+                    Cars[CarNumber].GetComponent<CarController>().enabled = true;
+                    countDown = false;
+                }
+                return;
+            }
+
+            
             float timer = Time.time - startTime;
 
             string seconds = (timer % 60).ToString("f3");
             string minutes = ((int)timer / 60).ToString();
 
-            TimeText.text = minutes + ":" + seconds;
+            TimeText.text = minutes + ":" + seconds; 
+            
+            if(timer >= 1 && timer <= 2)
+            {
+                StartCountDownText.text = "";
+            }
         }
 
         if (finish)
