@@ -207,6 +207,8 @@ GameObject:
   - component: {fileID: 114727886746348352}
   - component: {fileID: 82198274917079030}
   - component: {fileID: 114926985251003408}
+  - component: {fileID: 114484159981672336}
+  - component: {fileID: 114716822538119550}
   m_Layer: 0
   m_Name: Car1
   m_TagString: Player
@@ -311,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898373744373450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.26, z: 1.03}
+  m_LocalPosition: {x: 0, y: -0.11, z: 1.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000016627927122}
@@ -743,7 +745,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e2d94587f51a884687ed7db81e672de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -829,6 +831,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114484159981672336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905750001714444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65b0ad25764c524d9a051fe049fc21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LWheel: {fileID: 146073081229356842}
+  RWheel: {fileID: 146961238878310606}
+  RBody: {fileID: 54755591717486762}
 --- !u!114 &114511882316073734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -851,9 +867,24 @@ MonoBehaviour:
     Steering: 0
   MotorTorque: 1000
   SteeringAngle: 25
-  BrakeForce: 1000
+  BrakeForce: 50000
   CenterOfMass: {fileID: 4283754841518628}
   SpawnPoint: {fileID: 0}
+  PauseMenuCanvas: {fileID: 0}
+--- !u!114 &114716822538119550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905750001714444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65b0ad25764c524d9a051fe049fc21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LWheel: {fileID: 146858156634795852}
+  RWheel: {fileID: 146422432603994052}
+  RBody: {fileID: 54755591717486762}
 --- !u!114 &114727886746348352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -873,6 +904,7 @@ MonoBehaviour:
   FinishImage: {fileID: 0}
   TimeText: {fileID: 0}
   FinishText: {fileID: 0}
+  StartCountDownText: {fileID: 0}
 --- !u!114 &114926985251003408
 MonoBehaviour:
   m_ObjectHideFlags: 1
