@@ -16,7 +16,8 @@ public class CarController : MonoBehaviour
     public List<AxleInfo> AxleInfos;
     public float MotorTorque;
     public float SteeringAngle;
-    public float BrakeForce; 
+    public float BrakeForce;
+    public float HandBrakeForce;
     public Transform CenterOfMass;
     public Transform SpawnPoint;
     public GameObject PauseMenuCanvas;
@@ -49,10 +50,10 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
             {
-                axleInfo.leftWheel.brakeTorque = BrakeForce;
-                axleInfo.rightWheel.brakeTorque = BrakeForce;
+                axleInfo.leftWheel.brakeTorque = HandBrakeForce;
+                axleInfo.rightWheel.brakeTorque = HandBrakeForce;
             }
-            if (Input.GetKeyUp(KeyCode.Space))
+            else
             {
                 axleInfo.leftWheel.brakeTorque = 0;
                 axleInfo.rightWheel.brakeTorque = 0;
